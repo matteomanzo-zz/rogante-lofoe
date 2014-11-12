@@ -1,4 +1,4 @@
 Move or rename files.
-It gets 2 attributes: 
+It takes 2 parameters: 
 1. which file 
 2.where to move it or how to rename it.
