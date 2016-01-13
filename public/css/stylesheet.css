@@ -1,0 +1,13 @@
+fieldset {
+  width: 30em;
+}
+
+label.field {
+  width: 11%;
+  float: left;
+}
+
+input.textbox-300 {
+  width: 300px;
+  float: left;
+}
