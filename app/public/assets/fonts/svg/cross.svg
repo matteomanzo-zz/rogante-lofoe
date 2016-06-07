@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+	 viewBox="-242.5 -242.5 512 512" enable-background="new -242.5 -242.5 512 512" xml:space="preserve">
+<title>cross</title>
+<desc>Created with sketchtool.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="tweegs-home-menu" transform="translate(-1376.000000, -22.000000)" sketch:type="MSArtboardGroup">
+		<g id="Group" transform="translate(76.000000, 15.000000)" sketch:type="MSLayerGroup">
+			<path id="cross" sketch:type="MSShapeGroup" d="M1226.42-32.716c4.646,4.638,10.743,6.957,16.84,6.957s12.193-2.319,16.84-6.957
+				c9.311-9.267,9.311-24.283,0-33.55l-145.854-145.281c-9.293-9.267-24.387-9.267-33.68,0c-9.31,9.267-9.31,24.292,0,33.558
+				L1226.42-32.716z M1400.552,73.63c-9.293-9.258-24.388-9.258-33.681,0c-9.31,9.259-9.31,24.3,0,33.559l145.854,145.264
+				c4.655,4.655,10.735,6.965,16.849,6.965c6.08,0,12.193-2.31,16.832-6.965c9.31-9.259,9.31-24.283,0-33.542L1400.552,73.63z
+				 M1546.406-177.989l-432.161,430.441c-4.646,4.655-10.743,6.965-16.84,6.965s-12.194-2.31-16.84-6.965
+				c-9.31-9.259-9.31-24.283,0-33.542l432.16-430.457c9.293-9.267,24.388-9.267,33.681,0
+				C1555.716-202.28,1555.716-187.255,1546.406-177.989L1546.406-177.989z"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px"
+	 viewBox="-246.5 -244 512 512" enable-background="new -246.5 -244 512 512" xml:space="preserve">
+<title>lock</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="tweegs-home-footer-2" transform="translate(-1235.000000, -22.000000)" sketch:type="MSArtboardGroup">
+		
+			<g id="Fill-1-_x2B_-Accedi-_x2B_-Rectangle-2-_x2B_-Fill-1-_x2B_-Page-1" transform="translate(30.000000, 15.000000)" sketch:type="MSLayerGroup">
+			<g id="Accedi-_x2B_-Rectangle-2-_x2B_-Fill-1" transform="translate(1205.000000, 7.000000)" sketch:type="MSShapeGroup">
+				<path id="lock" d="M-101.571,248.327c-38.695,0-70.179-31.483-70.179-70.179V39.695c0-38.696,31.483-70.17,70.179-70.17H9.188
+					c8.174,0,14.79,6.616,14.79,14.79c0,8.164-6.616,14.79-14.79,14.79h-110.759c-22.386,0-40.6,18.204-40.6,40.59v138.453
+					c0,22.387,18.213,40.6,40.6,40.6h221.537c22.387,0,40.58-18.213,40.58-40.6V39.695c0-22.387-18.193-40.59-40.58-40.59
+					c-8.174,0-14.79-6.625-14.79-14.79v-83.084c0-52.917-43.061-95.979-95.988-95.979c-52.917,0-95.969,43.062-95.969,95.979
+					c0,8.174-6.625,14.79-14.79,14.79c-8.174,0-14.79-6.616-14.79-14.79c0-69.227,56.322-125.558,125.548-125.558
+					c69.236,0,125.568,56.332,125.568,125.558v69.862c31.599,6.808,55.369,34.983,55.369,68.602v138.453
+					c0,38.695-31.464,70.179-70.159,70.179H-101.571z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

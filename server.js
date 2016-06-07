@@ -3,15 +3,26 @@ var https = require('https');
 var express = require('express');
 var app = express();
 var server = http.createServer(app);
+var path = require('path')
 var db = require("./db");
 var bodyParser = require('body-parser')
 var Shoe = require('./app/model/shoe');
 var debug = require('debug')
+var sass = require('node-sass-middleware')
 console.log(process.env.ENV)
 if (process.env.ENV == 'DEVELOPMENT') require('dotenv').config()
 
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/app/views');
+app.use(sass({
+  root: path.join(__dirname + '/app/public'),
+  src: path.join('/assets'),
+  debug: true,
+  indentedSyntax: true,
+  outputStyle: 'compressed',
+  prefix: '/stylesheets'
+}))
+
 app.use(express.static(__dirname + '/app/public'));
 app.use(bodyParser.text({ type: 'text/html' }));
 // app.use(bodyParser.json());
@@ -143,17 +154,40 @@ app.post('/delete', function(request, response) {
 
 app.post('/done', function(request, response) {
 
-  Shoe.findById(request.body.Id, function(err, user) {
+  Shoe.findById(request.body.Id, function(err, shoe) {
     if (err) throw err;
-
-    console.log(user);
+    shoe.done = true
+    console.log(shoe);
+    shoe.save(function(err) {
+      if (err) {
+        throw err;
+      } else {
+        console.log('shoe saved');
+        console.log(shoe)
+      }
+    });
   });
 
-  Shoe.find({}, function(err, shoes) {
-    if (err) throw err;
+  response.redirect('/')
+});
 
-    response.render('index', {shoes: shoes});
+app.post('/undo', function(request, response) {
+
+  Shoe.findById(request.body.Id, function(err, shoe) {
+    if (err) throw err;
+    shoe.done = false
+    console.log(shoe);
+    shoe.save(function(err) {
+      if (err) {
+        throw err;
+      } else {
+        console.log('shoe saved');
+        console.log(shoe)
+      }
+    });
   });
+
+  response.redirect('/')
 });
 
 server.listen((process.env.PORT || 9999), function(){
