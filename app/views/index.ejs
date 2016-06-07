@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/stylesheet.css">
+  </head>
+
+  <body>
+    <form action="orders" method="post">
+     <fieldset>
+       <legend>Order</legend>
+       <p><label class='field' for='Model'>Model: </label><input type="text" name="model"/></p>
+       <p><label class='field' for='Colour'>Colour: </label><input type="text" name="colour"/></p>
+       <p><label class='field' for='Size'>Size: </label><input type="number" name="size"/></p>
+       <input type="submit" />
+     </fieldset>
+    </form>
+    <br><br><br><br><br><br>
+    <% if (shoes) { %>
+      <% for(var i = 0; i <= shoes.length - 1; i++) { %>
+        <p>
+          <%= shoes[i]._id %>
+          <%= shoes[i].model %>
+          <%= shoes[i].colour %>
+          <%= shoes[i].size %>
+          <%= shoes[i].price %>
+          <%= shoes[i].vendor %>
+          <%= shoes[i].ordered_at %>
+          <%= shoes[i].closed_at %>
+          <%= shoes[i].email %>
+          <%= shoes[i].done %>
+          <form action="done" method="post">
+            <button type="submit" name="Id" value="<%= shoes[i].id %>">DONE</button>
+          </form>
+          <form action="delete" method="post">
+            <button type="submit" name="Id" value="<%= shoes[i].id %>">DELETE</button>
+          </form>
+        </p>
+      <% } %>
+
+    <% } else { %>
+      Nulla
+    <% } %>
+  </body>
+</html>

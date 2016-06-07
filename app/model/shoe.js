@@ -4,11 +4,16 @@ var Schema = mongoose.Schema;
 
 // create a schema
 var userSchema = new Schema({
+	_id: Number,
   model: String,
   size: Number,
   colour: String,
+  price: Number,
+  vendor: String,
   ordered_at: Date,
-  todo: Boolean
+  closed_at: Date,
+  email: String,
+  done: Boolean
 });
 
 // the schema is useless so far

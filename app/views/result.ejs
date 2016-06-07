@@ -8,13 +8,12 @@
   <body>
     <% if (shoes) { %>
       <% for(var i = 0; i <= shoes.length - 1; i++) { %>
-        <% if (shoes[i].size == 43) { %>
-          <p>
-            <%= shoes[i].model %>
-            <%= shoes[i].color %>
-            <%= shoes[i].size %>
-          </p>
-        <% } %>
+        <p>
+          <%= shoes[i]._id %>
+          <%= shoes[i].model %>
+          <%= shoes[i].color %>
+          <%= shoes[i].size %>
+        </p>
       <% } %>
 
     <% } else { %>
