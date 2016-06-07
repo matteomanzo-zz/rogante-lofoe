@@ -7,7 +7,6 @@ var db = require("./db");
 var bodyParser = require('body-parser')
 var Shoe = require('./app/model/shoe');
 var debug = require('debug')
-require('dotenv').config()
 
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/app/views');
