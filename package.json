@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "ENV=DEVELOPMENT node server.js",
+    "start": "ENV=PRODUCTION node server.js"
   },
   "author": "Matteo Manzo",
   "license": "ISC",
