@@ -154,6 +154,6 @@ app.post('/done', function(request, response) {
   });
 });
 
-server.listen(9999, function(){
+server.listen((process.env.PORT || 9999), function(){
   console.log('Lapi server has started');
 });
