@@ -82,9 +82,9 @@ app.get('/', function(request, response) {
   });
 });
 
-var saveShoe = function(shoe= undefined) {
+var saveShoe = function(shoe) {
   Shoe.count({_id: shoe._id}, function (err, count){ 
-    if (count > 0 || shoe === undefined) {
+    if (count > 0) {
       console.log(shoe._id)
       console.log('id already here')
       shoe._id = Math.floor((Math.random() * 10000000000) + 1);
