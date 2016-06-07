@@ -1,2 +1,5 @@
+require('dotenv').config()
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/rogante');
+var db = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/rogante'
+mongoose.connect(db);
+console.log('connected to ' + db)

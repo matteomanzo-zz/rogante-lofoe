@@ -82,7 +82,7 @@ app.get('/', function(request, response) {
   });
 });
 
-var saveShoe = function(shoe = undefined) {
+var saveShoe = function(shoe= undefined) {
   Shoe.count({_id: shoe._id}, function (err, count){ 
     if (count > 0 || shoe === undefined) {
       console.log(shoe._id)
