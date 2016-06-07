@@ -8,11 +8,12 @@
   <body>
     <form action="orders" method="post">
      <fieldset>
-       <legend>Order</legend>
-       <p><label class='field' for='Model'>Model: </label><input type="text" name="model"/></p>
-       <p><label class='field' for='Colour'>Colour: </label><input type="text" name="colour"/></p>
-       <p><label class='field' for='Size'>Size: </label><input type="number" name="size"/></p>
-       <input type="submit" />
+       <legend>New order</legend>
+        <div class='item__input'><label class='field' for='Model'>Model: </label><input type="text" name="model"/></div>
+        <div class='item__input'><label class='field' for='Colour'>Colour: </label><input type="text" name="colour"/></div>
+        <div class='item__input'><label class='field' for='Size'>Size: </label><input type="number" name="size"/></div>
+        <div class='item__input'><label class='field' for='Price'>Price: </label><input type="number" name="price"/></div>
+       <input class='item__submit' type="submit" />
      </fieldset>
     </form>
     <br><br>
@@ -20,23 +21,30 @@
       <div>
         <% for(var i = 0; i <= shoes.length - 1; i++) { %>
           <% if (shoes[i].done === false) { %>
-            <div class='culo'>
-              <%= shoes[i]._id %>
-              <%= shoes[i].model %>
+            <div class='item--todo'>
+              <!-- <%= shoes[i]._id %> -->
+              <%= shoes[i].model %> 
               <%= shoes[i].colour %>
-              <%= shoes[i].size %>
-              <%= shoes[i].price %>
-              <%= shoes[i].vendor %>
-              <%= shoes[i].ordered_at %>
-              <%= shoes[i].closed_at %>
-              <%= shoes[i].email %>
-              <%= shoes[i].done %>
-              <form action="done" method="post">
-                <button type="submit" name="Id" value="<%= shoes[i].id %>">DONE</button>
-              </form>
-              <form action="delete" method="post">
-                <button type="submit" name="Id" value="<%= shoes[i].id %>">DELETE</button>
-              </form>
+              <% if (shoes[i].size) { %>
+               - size: <%= shoes[i].size %>
+              <% } %>
+              <% if (shoes[i].price) { %>
+                - €<%= shoes[i].price %>
+              <% } %>
+              <div class='item__vendor'><%= shoes[i].vendor %></div>
+              <!-- <%= shoes[i].ordered_at %>
+              <%= shoes[i].closed_at %> -->
+              <div class='item__email'><%= shoes[i].email %></div>
+              <div class='item__space'></div>
+              <div class='item__done'>Done: <%= shoes[i].done %></div>
+              <div class='item__cta'>
+                <form action="done" method="post">
+                  <button type="submit" name="Id" value="<%= shoes[i].id %>">DONE</button>
+                </form>
+<!--                 <form action="delete" method="post">
+                  <button type="submit" name="Id" value="<%= shoes[i].id %>">DELETE</button>
+                </form> -->
+              </div>
             </div>
           <% } %>
         <% } %>
@@ -44,23 +52,30 @@
       <div>
         <% for(var i = 0; i <= shoes.length - 1; i++) { %>
           <% if (shoes[i].done === true) { %>
-            <div>
-              <%= shoes[i]._id %>
+            <div class='item--done'>
+              <!-- <%= shoes[i]._id %> -->
               <%= shoes[i].model %>
               <%= shoes[i].colour %>
-              <%= shoes[i].size %>
-              <%= shoes[i].price %>
-              <%= shoes[i].vendor %>
-              <%= shoes[i].ordered_at %>
-              <%= shoes[i].closed_at %>
-              <%= shoes[i].email %>
-              <%= shoes[i].done %>
-              <form action="undo" method="post">
-                <button type="submit" name="Id" value="<%= shoes[i].id %>">UNDO</button>
-              </form>
-              <form action="delete" method="post">
-                <button type="submit" name="Id" value="<%= shoes[i].id %>">DELETE</button>
-              </form>
+              <% if (shoes[i].size) { %>
+               - size: <%= shoes[i].size %>
+              <% } %>
+              <% if (shoes[i].price) { %>
+               - €<%= shoes[i].price %>
+              <% } %>
+              <div class='item__vendor'>| <%= shoes[i].vendor %> |</div>
+              <!-- <%= shoes[i].ordered_at %>
+              <%= shoes[i].closed_at %> -->
+              <div class='item__email'><%= shoes[i].email %></div>
+              <div class='item__space'></div>
+              <div class='item__done'>Done: <%= shoes[i].done %></div>
+              <div class='item__cta'>
+                <form action="undo" method="post">
+                  <button type="submit" name="Id" value="<%= shoes[i].id %>">UNDO</button>
+                </form>
+<!--                 <form action="delete" method="post">
+                  <button type="submit" name="Id" value="<%= shoes[i].id %>">DELETE</button>
+                </form> -->
+              </div>
             </div>
           <% } %>
         <% } %>

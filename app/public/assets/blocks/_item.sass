@@ -1,0 +1,24 @@
+.item
+  display: flex
+  height: 30px
+  align-items: center
+  +margin-bottom(1)
+
+.item--todo
+  @extend .item
+  background-color: #EEEEEE
+
+.item--done
+  @extend .item
+
+.item__vendor, .item__email, 
+.item__done, .item__cta
+  +margin-left(1)
+  
+.item__space
+  flex: 2 0 0
+
+.item__input
+  display: inline-block
+  width: 49%
+  +margin-bottom(1)

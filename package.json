@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ENV=DEVELOPMENT node server.js",
-    "start": "ENV=PRODUCTION node server.js"
+    "test": "NODE_ENV=DEVELOPMENT node server.js",
+    "start": "NODE_ENV=PRODUCTION node server.js"
   },
   "author": "Matteo Manzo",
   "license": "ISC",

@@ -9,8 +9,8 @@ var bodyParser = require('body-parser')
 var Shoe = require('./app/model/shoe');
 var debug = require('debug')
 var sass = require('node-sass-middleware')
-console.log(process.env.ENV)
-if (process.env.ENV == 'DEVELOPMENT') require('dotenv').config()
+console.log(process.env.NODE_ENV)
+if (process.env.NODE_ENV == 'DEVELOPMENT') require('dotenv').config()
 
 app.set('view engine', 'ejs');
 app.set('views',__dirname + '/app/views');
@@ -123,6 +123,7 @@ app.post('/orders', function(request, response) {
     model: request.body.model,
     size: request.body.size,
     colour: request.body.colour,
+    price: request.body.price,
     ordered_at: new Date(),
     done: false
   });
@@ -143,11 +144,11 @@ app.post('/delete', function(request, response) {
     user.remove(function(err) {
       if (err) throw err;
 
-      console.log('User successfully deleted!');
+      console.log('Shoe successfully deleted!');
     });
   });
 
-    response.redirect('/');
+  response.redirect('/');
 
 });
 
